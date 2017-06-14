@@ -1,0 +1,77 @@
+start of program 
+indentifier Test_Program 
+indentifier _testid 
+indentifier testid2_ 
+type integer 
+indentifier IntVar 
+assignment operator
+digit 
+semicolon
+type string 
+indentifier StrVar 
+assignment operator
+string "testing"
+semicolon
+type boolean 
+indentifier BlnVar 
+assignment operator
+boolean value false
+semicolon
+type boolean 
+indentifier BlnVar2 
+assignment operator
+boolean value true
+semicolon
+keyword if
+open brace
+indentifier BlnVar 
+close brace
+indentifier then 
+indentifier BlnVar 
+assignment operator
+boolean value false
+semicolon
+keyword end_if
+keyword function
+indentifier TestProc 
+open brace
+close brace
+keyword returns
+type integer 
+type integer 
+indentifier LocalVar 
+assignment operator
+digit 
+semicolon
+keyword end_function
+keyword while
+open brace
+indentifier BlnVar 
+close brace
+keyword end_while
+keyword while
+open brace
+digit 
+less than
+digit 
+close brace
+indentifier wend 
+keyword if
+open brace
+digit 
+not equal operator
+digit 
+or operator
+digit 
+equality operator
+digit 
+or operator
+not operator
+boolean value false
+and operator
+boolean value true
+close brace
+indentifier then 
+keyword end_if
+comment
+end of program

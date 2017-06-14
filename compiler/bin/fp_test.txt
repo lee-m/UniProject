@@ -1,0 +1,9 @@
+function main() returns void
+
+  if(0.567)
+    print_string("true")
+  else
+    print_string("false")
+  end_if
+
+end_function

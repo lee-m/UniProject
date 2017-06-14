@@ -1,0 +1,80 @@
+integer array[10];
+
+function quicksort(integer lower, integer upper) returns void
+  
+  integer i;
+  integer m;
+  integer temp;
+  integer pivot;
+
+  if(lower < upper)
+
+    temp = array[lower];
+    array[lower] = array[(upper + lower) / 2];
+    array[(upper + lower) / 2] = temp;
+    pivot = array[lower];
+    m = lower;
+
+    i = lower + 1;
+    while(i <= upper)
+
+      if(array[i] < pivot)
+	m = m + 1;
+	temp = array[m];
+        array[m] = array[i];
+	array[i] = temp;
+      end_if
+
+      i = i + 1;
+
+    end_while
+
+    temp = array[lower];
+    array[lower] = array[m];
+    array[m] = temp;
+    quicksort (lower, m - 1);
+    quicksort (m + 1, upper);
+
+  end_if
+
+end_function
+
+function initialise_array() returns void
+ 
+  array[0] = 9;
+  array[1] = 2;
+  array[2] = 4;
+  array[3] = 7;
+  array[4] = 10;
+  array[5] = 1;
+  array[6] = 5;
+  array[7] = 8;
+  array[8] = 3;
+  array[9] = 6;
+
+end_function
+
+function print_array() returns void
+
+  integer count = 0;
+  while(count < 10)
+    print_integer(array[count]);
+    count = count + 1;
+  end_while
+
+end_function
+
+function main() returns void
+ 
+  initialise_array();
+
+  print_string("Array contents before sorting:");
+  print_array();
+  print_string("");
+
+  quicksort(0, 9);
+
+  print_string("Array contents after sorting:");
+  print_array();
+
+end_function

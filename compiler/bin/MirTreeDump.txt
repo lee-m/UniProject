@@ -1,0 +1,126 @@
+integer array[10];
+function _quicksort(integer lower, integer upper) returns void
+  integer i;
+  integer m;
+  integer temp;
+  integer pivot;
+  integer CompTemp.0;
+  CompTemp.0 = lower;
+  CompTemp.0 = CompTemp.0 - upper;
+  if(CompTemp.0 < 0)
+	goto L0;
+  goto L1;
+  L0:
+  temp = array[lower];
+  integer CompTemp.2;
+  CompTemp.2 = upper;
+  CompTemp.2 = CompTemp.2 + lower;
+  integer CompTemp.3;
+  CompTemp.3 = CompTemp.2;
+  CompTemp.3 = CompTemp.3 / 2;
+  integer CompTemp.1;
+  CompTemp.1 = CompTemp.3;
+  array[lower] = array[CompTemp.1];
+  integer CompTemp.4;
+  CompTemp.4 = upper;
+  CompTemp.4 = CompTemp.4 + lower;
+  integer CompTemp.5;
+  CompTemp.5 = CompTemp.4;
+  CompTemp.5 = CompTemp.5 / 2;
+  array[CompTemp.5] = temp;
+  pivot = array[lower];
+  m = lower;
+  integer CompTemp.6;
+  CompTemp.6 = lower;
+  CompTemp.6 = CompTemp.6 + 1;
+  i = CompTemp.6;
+  L2:
+  integer CompTemp.7;
+  CompTemp.7 = i;
+  CompTemp.7 = CompTemp.7 - upper;
+  if(CompTemp.7 <= 0)
+	goto L3;
+  goto L4;
+  L3:
+  integer CompTemp.8;
+  CompTemp.8 = array[i];
+  integer CompTemp.9;
+  CompTemp.9 = CompTemp.8;
+  CompTemp.9 = CompTemp.9 - pivot;
+  if(CompTemp.9 < 0)
+	goto L5;
+  goto L6;
+  L5:
+  integer CompTemp.10;
+  CompTemp.10 = m;
+  CompTemp.10 = CompTemp.10 + 1;
+  m = CompTemp.10;
+  temp = array[m];
+  array[m] = array[i];
+  array[i] = temp;
+  L6:
+  integer CompTemp.11;
+  CompTemp.11 = i;
+  CompTemp.11 = CompTemp.11 + 1;
+  i = CompTemp.11;
+  goto L2;
+  L4:
+  temp = array[lower];
+  array[lower] = array[m];
+  array[m] = temp;
+  integer CompTemp.12;
+  CompTemp.12 = m;
+  CompTemp.12 = CompTemp.12 - 1;
+  _quicksort(lower, CompTemp.12);
+  integer CompTemp.13;
+  CompTemp.13 = m;
+  CompTemp.13 = CompTemp.13 + 1;
+  _quicksort(CompTemp.13, upper);
+  L1:
+end_function
+
+function _initialise_array() returns void
+  array[0] = 9;
+  array[1] = 2;
+  array[2] = 4;
+  array[3] = 7;
+  array[4] = 10;
+  array[5] = 1;
+  array[6] = 5;
+  array[7] = 8;
+  array[8] = 3;
+  array[9] = 6;
+end_function
+
+function _print_array() returns void
+  integer count;
+  count = 0;
+  L7:
+  integer CompTemp.14;
+  CompTemp.14 = count;
+  CompTemp.14 = CompTemp.14 - 10;
+  if(CompTemp.14 < 0)
+	goto L8;
+  goto L9;
+  L8:
+  integer CompTemp.15;
+  CompTemp.15 = array[count];
+  _print_integer(CompTemp.15);
+  integer CompTemp.16;
+  CompTemp.16 = count;
+  CompTemp.16 = CompTemp.16 + 1;
+  count = CompTemp.16;
+  goto L7;
+  L9:
+end_function
+
+function _main() returns void
+  _initialise_array();
+  _print_string(<str_ref_0>);
+  _print_array();
+  _print_string(<str_ref_1>);
+  _quicksort(0, 9);
+  _print_string(<str_ref_2>);
+  _print_array();
+end_function
+

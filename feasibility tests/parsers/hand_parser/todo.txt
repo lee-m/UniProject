@@ -1,0 +1,26 @@
+- type checking on expression trees
+- bug with || operator
+- check for constant array bounds like the following:
+
+  integer a[5 * 6]; //ok
+  
+  const integer b = 4;
+  integer c[b]; //ok
+
+  integer d = 5;
+  integer e[d]; //not ok
+
+- warn for using a constant variable as condition in if/while
+
+
+bugs:
+- following testcase cause an infinite loop:
+
+if(true <- missing '('
+
+  if(true)
+  end_if
+
+end_if
+
+- following testcase crashes: integer bob = -(1 * 4);

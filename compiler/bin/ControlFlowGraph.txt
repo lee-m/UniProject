@@ -1,0 +1,227 @@
+Control Flow Graph for function: _quicksort
+
+<basic block 0, fallthru, predecessors - ; successors - 1 2 >
+  integer i
+  integer m
+  integer temp
+  integer pivot
+  integer CompTemp.0
+  CompTemp.0 = lower
+  CompTemp.0 = CompTemp.0 - upper
+  if(CompTemp.0 < 0)
+	goto L0
+
+<end of basic block> 
+
+<basic block 1, predecessors - 0 ; successors - 11 >
+  goto L1
+
+<end of basic block> 
+
+<basic block 2, fallthru, predecessors - 0 ; successors - 3 >
+  L0:
+
+  temp = array[lower]
+  integer CompTemp.2
+  CompTemp.2 = upper
+  CompTemp.2 = CompTemp.2 + lower
+  integer CompTemp.3
+  CompTemp.3 = CompTemp.2
+  CompTemp.3 = CompTemp.3 / 2
+  integer CompTemp.1
+  CompTemp.1 = CompTemp.3
+  array[lower] = array[CompTemp.1]
+  integer CompTemp.4
+  CompTemp.4 = upper
+  CompTemp.4 = CompTemp.4 + lower
+  integer CompTemp.5
+  CompTemp.5 = CompTemp.4
+  CompTemp.5 = CompTemp.5 / 2
+  array[CompTemp.5] = temp
+  pivot = array[lower]
+  m = lower
+  integer CompTemp.6
+  CompTemp.6 = lower
+  CompTemp.6 = CompTemp.6 + 1
+  i = CompTemp.6
+
+<end of basic block> 
+
+<basic block 3, fallthru, predecessors - 2 9 ; successors - 4 5 >
+  L2:
+
+  integer CompTemp.7
+  CompTemp.7 = i
+  CompTemp.7 = CompTemp.7 - upper
+  if(CompTemp.7 <= 0)
+	goto L3
+
+<end of basic block> 
+
+<basic block 4, predecessors - 3 ; successors - 10 >
+  goto L4
+
+<end of basic block> 
+
+<basic block 5, fallthru, predecessors - 3 ; successors - 6 7 >
+  L3:
+
+  integer CompTemp.8
+  CompTemp.8 = array[i]
+  integer CompTemp.9
+  CompTemp.9 = CompTemp.8
+  CompTemp.9 = CompTemp.9 - pivot
+  if(CompTemp.9 < 0)
+	goto L5
+
+<end of basic block> 
+
+<basic block 6, predecessors - 5 ; successors - 8 >
+  goto L6
+
+<end of basic block> 
+
+<basic block 7, fallthru, predecessors - 5 ; successors - 8 >
+  L5:
+
+  integer CompTemp.10
+  CompTemp.10 = m
+  CompTemp.10 = CompTemp.10 + 1
+  m = CompTemp.10
+  temp = array[m]
+  array[m] = array[i]
+  array[i] = temp
+
+<end of basic block> 
+
+<basic block 8, fallthru, predecessors - 6 7 ; successors - 9 >
+  L6:
+
+  integer CompTemp.11
+  CompTemp.11 = i
+  CompTemp.11 = CompTemp.11 + 1
+  i = CompTemp.11
+
+<end of basic block> 
+
+<basic block 9, predecessors - 8 ; successors - 3 >
+  goto L2
+
+<end of basic block> 
+
+<basic block 10, fallthru, predecessors - 4 ; successors - 11 >
+  L4:
+
+  temp = array[lower]
+  array[lower] = array[m]
+  array[m] = temp
+  integer CompTemp.12
+  CompTemp.12 = m
+  CompTemp.12 = CompTemp.12 - 1
+  _quicksort(lower, CompTemp.12)
+  integer CompTemp.13
+  CompTemp.13 = m
+  CompTemp.13 = CompTemp.13 + 1
+  _quicksort(CompTemp.13, upper)
+
+<end of basic block> 
+
+<basic block 11, predecessors - 1 10 ; successors - 12 >
+  L1:
+
+
+<end of basic block> 
+
+<basic block 12, predecessors - 11 ; successors - >
+
+<end of basic block> 
+
+Control Flow Graph for function: _initialise_array
+
+<basic block 0, predecessors - ; successors - 1 >
+  array[0] = 9
+  array[1] = 2
+  array[2] = 4
+  array[3] = 7
+  array[4] = 10
+  array[5] = 1
+  array[6] = 5
+  array[7] = 8
+  array[8] = 3
+  array[9] = 6
+
+<end of basic block> 
+
+<basic block 1, predecessors - 0 ; successors - >
+
+<end of basic block> 
+
+Control Flow Graph for function: _print_array
+
+<basic block 0, fallthru, predecessors - ; successors - 1 >
+  integer count
+  count = 0
+
+<end of basic block> 
+
+<basic block 1, fallthru, predecessors - 0 4 ; successors - 2 3 >
+  L7:
+
+  integer CompTemp.14
+  CompTemp.14 = count
+  CompTemp.14 = CompTemp.14 - 10
+  if(CompTemp.14 < 0)
+	goto L8
+
+<end of basic block> 
+
+<basic block 2, predecessors - 1 ; successors - 5 >
+  goto L9
+
+<end of basic block> 
+
+<basic block 3, fallthru, predecessors - 1 ; successors - 4 >
+  L8:
+
+  integer CompTemp.15
+  CompTemp.15 = array[count]
+  _print_integer(CompTemp.15)
+  integer CompTemp.16
+  CompTemp.16 = count
+  CompTemp.16 = CompTemp.16 + 1
+  count = CompTemp.16
+
+<end of basic block> 
+
+<basic block 4, predecessors - 3 ; successors - 1 >
+  goto L7
+
+<end of basic block> 
+
+<basic block 5, predecessors - 2 ; successors - 6 >
+  L9:
+
+
+<end of basic block> 
+
+<basic block 6, predecessors - 5 ; successors - >
+
+<end of basic block> 
+
+Control Flow Graph for function: _main
+
+<basic block 0, predecessors - ; successors - 1 >
+  _initialise_array()
+  _print_string(<str_ref_0>)
+  _print_array()
+  _print_string(<str_ref_1>)
+  _quicksort(0, 9)
+  _print_string(<str_ref_2>)
+  _print_array()
+
+<end of basic block> 
+
+<basic block 1, predecessors - 0 ; successors - >
+
+<end of basic block> 
+

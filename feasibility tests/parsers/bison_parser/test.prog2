@@ -1,0 +1,49 @@
+integer __test__int_67574_var;
+const float bob = 5;
+string arr_var[5];
+
+integer test = true && false;
+integer test2[3];
+integer test3[5 * 54];
+integer test4 = bob;
+string test_str = "testing";
+
+test3[4] = 4;
+
+if(5 <= 7 && true || 3.45 > 5.6) 
+
+  if((5 + 3) > 0)
+  end_if
+
+  while(5 > 9)
+
+    if(true)
+    end_if
+
+  end_while
+
+end_if
+
+function test_func(integer a, float b, string c) returns integer
+
+	if(true)
+ 	end_if
+
+	integer in_func_var[6];
+	return 3;
+
+        bob = arr_var;
+
+end_function
+
+function test_func(integer a, float b, string c) returns integer
+
+	if(true)
+ 	end_if
+
+	integer in_func_var[6];
+	return 3;
+
+end_function
+
+call bob(4,5,5,5,5.666)

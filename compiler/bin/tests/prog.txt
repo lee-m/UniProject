@@ -1,0 +1,23 @@
+
+function main(float fltPrice, integer intC, 
+	      string strC, boolean blnC) returns float
+
+   integer test = 5 * 5 + 2 / (3 + 3 / 5) + 4;
+
+   if (test > 45)
+     test =  4 * 43;
+   else
+     
+     if(true)
+       test = 55;
+     else
+       test = 99;
+     end_if
+
+     test = 4 * 4;
+
+   end_if
+
+   return 0.0;
+
+end_function

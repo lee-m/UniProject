@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler", "Compiler.vcproj", "{A5569199-EC79-49A5-A5A2-2A5E7A7C3531}"
+	ProjectSection(ProjectDependencies) = postProject
+		{388CD1E3-78A3-4BD8-B5EF-C038A687260A} = {388CD1E3-78A3-4BD8-B5EF-C038A687260A}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stdlib", "..\..\..\stdlib\scripts\vs7.1\stdlib.vcproj", "{388CD1E3-78A3-4BD8-B5EF-C038A687260A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A5569199-EC79-49A5-A5A2-2A5E7A7C3531}.Debug.ActiveCfg = Debug|Win32
+		{A5569199-EC79-49A5-A5A2-2A5E7A7C3531}.Debug.Build.0 = Debug|Win32
+		{A5569199-EC79-49A5-A5A2-2A5E7A7C3531}.Release.ActiveCfg = Release|Win32
+		{A5569199-EC79-49A5-A5A2-2A5E7A7C3531}.Release.Build.0 = Release|Win32
+		{388CD1E3-78A3-4BD8-B5EF-C038A687260A}.Debug.ActiveCfg = Debug|Win32
+		{388CD1E3-78A3-4BD8-B5EF-C038A687260A}.Debug.Build.0 = Debug|Win32
+		{388CD1E3-78A3-4BD8-B5EF-C038A687260A}.Release.ActiveCfg = Release|Win32
+		{388CD1E3-78A3-4BD8-B5EF-C038A687260A}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+ 
+==8147== Invalid read of size 1
+==8147==    at 0x1B909168: strcmp (mac_replace_strmem.c:249)
+==8147==    by 0x8049853: find_hashtab_entry (hashtable.c:198)
+==8147==    by 0x804AF4A: lookup_identifier (symtable.c:117)
+==8147==    by 0x8049422: LookupIdentifier (parse.y:269)
+==8147==    by 0x8048F0A: yyparse (parse.y:124)
+==8147==    by 0x8049BAD: main (main.c:26)
+==8147==  Address 0x1B92E3E3 is 0 bytes after a block of size 3 alloc'd
+==8147==    at 0x1B908222: malloc (vg_replace_malloc.c:130)
+==8147==    by 0x804971B: insert_hashtab_entry (hashtable.c:161)
+==8147==    by 0x804AF24: add_symbol (symtable.c:108)
+==8147==    by 0x8048EFD: yyparse (parse.y:107)
+==8147==    by 0x8049BAD: main (main.c:26)

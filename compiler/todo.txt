@@ -1,0 +1,17 @@
+for this week:
+- factor code out for generating temp vars
+- assignment expressions where the RHS is a function call
+- remove all the functions which do a switch on the tree code and put the 
+  functionality into a new virtual function in CTreeNode
+- boolean expressions as function call parameters
+
+
+optimisations:
+- modify if lowering to only require one jump if we haven't got an else
+- optimise if() with constant parameters
+- eliminate stores to a var by itself during MIR lowering eg. a = a 
+- modify "if..else" statement lowering so that the else block follows the
+  compare so we only need one jump instead of two
+- dont clear out the symbol table after parsing, instead only add decls
+  for compiler generated temporaries
+- optimise array access handling if the index is a literal

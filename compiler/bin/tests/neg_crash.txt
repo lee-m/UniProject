@@ -1,0 +1,6 @@
+function main() returns void
+
+  integer a = 40;
+  a = -50 * 3;
+
+end_function

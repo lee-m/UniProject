@@ -1,0 +1,6 @@
+function main() returns void
+
+  integer a = 5;
+  a = a + 4;
+
+end_function

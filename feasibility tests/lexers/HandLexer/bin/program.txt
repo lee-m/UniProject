@@ -1,0 +1,52 @@
+6 >= 4
+5 > 3
+1 == 1
+
+3 < 2
+4 <= 1
+1 != 2
+!1
+
+a or b
+
+integer IntVar = 0;
+ 
+ 3 - 3 * 2 / 8 + 6
+
+program Test_Program
+
+  _testid
+  testid2_
+
+  "test string"
+  ""
+
+  
+  string  StrVar = "testing";
+
+  boolean BlnVar = false;
+  boolean BlnVar2 = true;
+
+  if (BlnVar) then
+    BlnVar = false;
+  end_if
+
+  function TestProc() returns integer
+
+    integer LocalVar = 1;
+
+  end_function
+
+  while (BlnVar)
+  end_while
+
+  while (1 < 3)
+  wend
+
+  if (1 != 3 || 3 == 3 or !false and true) then
+  end_if
+
+  /* this is a comment */
+
+end_program
+  

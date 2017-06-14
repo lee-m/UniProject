@@ -1,0 +1,16 @@
+function test(float fltP, integer intC, string strC, 
+	      boolean blnC) returns float
+
+    integer a = 3 * 4 + 5 / 6;
+    return a + (5 * 4);
+
+end_function
+
+function test2(float fltP, integer intC, 
+	       string strC, boolean blnC) returns void
+
+    integer b = 3;
+    integer c = 4;
+    integer a = b * c;
+
+end_function

@@ -1,0 +1,1 @@
+Compiler_d quicksort.txt --dump-reg-allocs --dump-mir-tree

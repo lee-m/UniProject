@@ -1,0 +1,71 @@
+/*const string foo = 6 * 4;
+
+integer test_var[7];
+float test_var2 = 4;
+
+test_var[2] = 45;
+
+while (false)
+
+  if (true)
+
+    if(false)
+    end_if
+
+  end_if
+
+end_while
+
+
+function test_func(integer a, float b) returns void
+
+ if(false)
+   string test_var3;
+ end_if
+ 
+end_function
+
+function test_func(integer a) returns void
+
+ if(false)
+   string test_var3;
+ end_if
+
+ test_func(2);
+ 
+end_function
+
+integer bob = test_func(34, 43) && 2;
+
+function test(float a) returns integer
+
+  integer b = a;
+  return 4;
+
+end_function
+
+integer bob[4];
+string jim = bob[2];
+boolean george = test(32);
+
+integer bob = 3 / -(3 - 1 + (3 * 3));
+string jim[5];
+
+const boolean rob = true;
+*/
+
+function derek(integer a) returns integer
+
+  return 2;
+
+end_function
+
+function herb() returns void
+
+  if(4 > 4)
+    derek(1);
+  else
+    derek(45);
+  end_if
+
+end_function

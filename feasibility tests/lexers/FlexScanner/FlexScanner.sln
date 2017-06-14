@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlexScanner", "FlexScanner.vcproj", "{EAABFF3E-448A-49FF-8E8D-E0386E3ABAB0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EAABFF3E-448A-49FF-8E8D-E0386E3ABAB0}.Debug.ActiveCfg = Debug|Win32
+		{EAABFF3E-448A-49FF-8E8D-E0386E3ABAB0}.Debug.Build.0 = Debug|Win32
+		{EAABFF3E-448A-49FF-8E8D-E0386E3ABAB0}.Release.ActiveCfg = Release|Win32
+		{EAABFF3E-448A-49FF-8E8D-E0386E3ABAB0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

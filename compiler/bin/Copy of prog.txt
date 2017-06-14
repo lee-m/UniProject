@@ -1,0 +1,90 @@
+integer test_var[7];
+float test_var2 = 4;
+
+function test_func(integer a) returns void
+
+ if(false)
+   string test_var3;
+ end_if
+
+ test_func(2);
+ 
+end_function
+
+function test(float a) returns integer
+
+  integer b = a;
+  return 4;
+
+end_function
+
+integer bob = 3 / -(3 - 1 + (3 * 3));
+string jim[5];
+
+const boolean rob = true;
+
+integer arr[5];
+integer a = arr[4] * 2;
+integer bob2 = a * 3;
+
+function derek(integer a, integer b) returns integer
+
+  if(b > 50)
+    b = 50;
+  end_if
+
+  return 2;
+
+end_function
+
+function test_func2(integer a, float b) returns integer
+
+  if(true and false)
+    string v = "34";
+  else
+    string bb = "else";
+  end_if
+
+  integer z = test_func2(1, 2) * 3;
+
+  return 0;
+
+end_function
+
+function LeeIsAcock2(float fltPrice, 
+		    integer intCock, 
+		    string strCock, 
+		    boolean blnCock) 
+					returns void
+
+    integer b = 3;
+    integer c = 4;
+    integer aa = b;
+
+end_function
+
+function LeeIsAcock(float fltPrice, 
+		    integer intCock, 
+		    string strCock, 
+		    boolean blnCock) 
+					returns float
+
+   integer test2 = 5 * 5 + 2 / (3 + 3 / 5) + 4;
+
+   if (test2 > 45)
+     test2 =  4 * 43;
+   else
+     
+     if(true)
+       test2 = 55;
+     else
+       test2 = 99;
+     end_if
+
+     test2 = 4 * 4;
+
+   end_if
+
+   return 0.0;
+
+end_function

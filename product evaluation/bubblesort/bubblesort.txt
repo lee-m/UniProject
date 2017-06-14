@@ -1,0 +1,51 @@
+function main() returns void
+ 
+  integer array[10];
+  integer arr_size = 9;
+  integer outer_counter = 0;
+  integer inner_counter = 0;
+
+  array[0] = 10;
+  array[1] = 5;
+  array[2] = 7;
+  array[3] = 9;
+  array[4] = 3;
+  array[5] = 2;
+  array[6] = 8;
+  array[7] = 1;
+  array[8] = 4;
+  array[9] = 6;
+	
+  while(outer_counter < arr_size)
+
+    inner_counter = 0;
+
+    while(inner_counter < arr_size - outer_counter)
+
+      if(array[inner_counter + 1] < array[inner_counter])
+        integer tmp = array[inner_counter];
+	array[inner_counter] = array[inner_counter + 1];
+	array[inner_counter + 1] = tmp;
+      end_if
+
+      inner_counter = inner_counter + 1;
+
+    end_while
+
+    outer_counter = outer_counter + 1;
+
+  end_while
+
+  print_string("results:");
+  print_integer(array[0]);
+  print_integer(array[1]);
+  print_integer(array[2]);
+  print_integer(array[3]);
+  print_integer(array[4]);
+  print_integer(array[5]);
+  print_integer(array[6]);
+  print_integer(array[7]);
+  print_integer(array[8]);
+  print_integer(array[9]);
+
+end_function

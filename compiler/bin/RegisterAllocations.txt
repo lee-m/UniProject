@@ -1,0 +1,50 @@
+Value: CompTemp.0  Register: eax
+
+Value: i  Register: ebx
+
+Value: m  Register: ecx
+
+Value: pivot  Register: edx
+
+Value: temp  Spilled At Location: 3  Stack Frame Offset: -4
+
+Value: CompTemp.1  Register: eax
+
+Value: CompTemp.2  Register: eax
+
+Value: CompTemp.3  Register: eax
+
+Value: CompTemp.4  Register: eax
+
+Value: CompTemp.5  Register: eax
+
+Value: CompTemp.6  Register: eax
+
+Value: array  Global Variable, no register required
+
+Value: CompTemp.7  Register: eax
+
+Value: CompTemp.8  Register: eax
+
+Value: CompTemp.9  Register: eax
+
+Value: CompTemp.10  Register: eax
+
+Value: CompTemp.11  Register: eax
+
+Value: CompTemp.12  Register: eax
+
+Value: CompTemp.13  Register: ebx
+
+Value: array  Global Variable, no register required
+
+Value: count  Register: eax
+
+Value: CompTemp.14  Register: ebx
+
+Value: CompTemp.15  Register: ecx
+
+Value: CompTemp.16  Register: edx
+
+Value: array  Global Variable, no register required
+

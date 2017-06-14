@@ -1,0 +1,1 @@
+Compiler_d prog.txt --dump-reg-allocs --dump-mir-tree --dump-cfg --save-assembly

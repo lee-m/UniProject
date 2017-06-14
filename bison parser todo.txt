@@ -1,0 +1,5 @@
+- const parameters
+- else clause (lexer and parser)
+- no 'call' keyword
+- change && to "and"
+- change || to "or" (hand/lex lexer)

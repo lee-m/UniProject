@@ -1,0 +1,94 @@
+%{
+	/* needed when compiling with VS. */
+#ifdef _MSC_VER
+#include <stdlib.h>
+#endif
+
+	void EatComment();
+%}
+
+delim		[ \t\n]
+whitespace	{delim}*
+program		"program"
+endprogram	"end_program"
+type		integer|float|string|boolean
+underscore  "_"
+letter		[a-zA-Z]|{underscore}*
+digit		[0-9]
+keyword		if|end_if|function|end_function|returns|while|end_while|const|else|return
+id			{letter}({letter}|{digit})*
+strings		\"{letter}*\"
+and_op		"and"
+or_op		"or"
+start_com   "//"
+arith_op	"+"|"-"|"*"|"/"
+
+%%
+
+{digit}		printf("digit \n");
+{endprogram}	printf("end of program\n");
+true		printf("boolean value true\n");
+false		printf("boolean value false\n");                                                      
+{program}	printf("start of program \n");
+{type}		printf("type %s \n", yytext);
+{keyword}	printf("keyword %s\n", yytext);
+{strings}	printf("string %s\n", yytext);
+{arith_op}		printf("arithmetic operator %s\n", yytext);
+{id}		printf("indentifier %s \n", yytext);
+{whitespace}
+=			printf("assignment operator\n");
+\(			printf("open brace\n");
+\)			printf("close brace\n");
+;			printf("semicolon\n");
+,			printf("comma\n");
+\[			printf("open sqr paren\n");
+\]			printf("close sqr paren\n");
+\<			printf("less than\n");
+\<=			printf("less than or equal\n");
+\>			printf("greater than\n");
+\>=			printf("greater than or equal\n");
+!			printf("not operator\n");
+!=			printf("not equal operator\n");
+==			printf("equality operator\n");
+{or_op}		printf("or operator\n");
+{and_op}	printf("and operator\n");
+"/*"        printf("comment\n"); EatComment();
+
+%%
+
+int main(int argc, char *argv[])
+{
+  yyin = fopen(argv[1], "r");
+  yylex();
+  return 0;
+}
+
+void EatComment()
+{
+  /* 
+     following code taken from the Flex manual :
+     http://www.gnu.org/software/flex/manual/html_chapter/flex_9.html
+  */
+  register int c;
+
+    for ( ; ; )
+        {
+        while ( (c = input()) != '*' &&
+                c != EOF )
+            ;    /* eat up text of comment */
+
+        if ( c == '*' )
+            {
+            while ( (c = input()) == '*' )
+                ;
+            if ( c == '/' )
+                break;    /* found the end */
+            }
+
+        if ( c == EOF )
+            {
+            printf( "EOF in comment" );
+            break;
+            }
+        }
+}

@@ -1,0 +1,13 @@
+integer a;
+
+function test_func(integer b) returns void
+
+  b = b * 4;
+
+end_function
+
+function main() returns void
+  
+  test_func(a);
+
+end_function

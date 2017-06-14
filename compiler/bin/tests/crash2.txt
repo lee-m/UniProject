@@ -1,0 +1,7 @@
+
+function main() returns void
+ 
+  integer a = 40 * 10 * / 2;
+
+end_function
+

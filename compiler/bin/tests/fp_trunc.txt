@@ -1,0 +1,29 @@
+
+function main() returns void
+
+  /* should print "1" */
+  integer no_arr = 1.99;
+  print_integer(no_arr);
+
+  float arr[2];
+  arr[0] = 1.13;
+  arr[1] = 4.556;
+  
+  /* Should print "1" */
+  integer rhs_arr = arr[0];
+  print_integer(rhs_arr);
+
+  integer int_arr[2];
+  int_arr[0] = 3.67;
+  int_arr[1] = arr[1];
+
+  /* Should print "3" */
+  print_integer(int_arr[0]);
+
+  /* Should print "4" */
+  print_integer(int_arr[1]);
+
+  /* Should print "4" */
+  print_integer(int_arr[arr[0]]);
+
+end_function

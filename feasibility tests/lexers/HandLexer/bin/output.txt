@@ -1,0 +1,340 @@
+token type: integer digit
+token value: 6
+
+token type: greater than or equal
+token value: >=
+
+token type: integer digit
+token value: 4
+
+token type: integer digit
+token value: 5
+
+token type: greater than
+token value: >
+
+token type: integer digit
+token value: 3
+
+token type: integer digit
+token value: 1
+
+token type: equality
+token value: ==
+
+token type: integer digit
+token value: 1
+
+token type: integer digit
+token value: 3
+
+token type: less than
+token value: <
+
+token type: integer digit
+token value: 2
+
+token type: integer digit
+token value: 4
+
+token type: less than or equal
+token value: <=
+
+token type: integer digit
+token value: 1
+
+token type: integer digit
+token value: 1
+
+token type: not equal
+token value: !=
+
+token type: integer digit
+token value: 2
+
+token type: not
+token value: !
+
+token type: integer digit
+token value: 1
+
+token type: name
+token value: a
+
+token type: or
+token value: ||
+
+token type: name
+token value: b
+
+token type: name
+token value: c
+
+token type: name
+token value: |
+
+token type: name
+token value: d
+
+token type: integer type
+token value: integer
+
+token type: name
+token value: IntVar
+
+token type: assignment
+token value: =
+
+token type: integer digit
+token value: 0
+
+token type: semi-colon
+token value: ;
+
+token type: integer digit
+token value: 3
+
+token type: subtract op
+token value: -
+
+token type: integer digit
+token value: 3
+
+token type: multiply op
+token value: *
+
+token type: integer digit
+token value: 2
+
+token type: divide op
+token value: /
+
+token type: integer digit
+token value: 8
+
+token type: addition op
+token value: +
+
+token type: integer digit
+token value: 6
+
+token type: begin program
+token value: program
+
+token type: name
+token value: Test_Program
+
+token type: name
+token value: _testid
+
+token type: name
+token value: testid2_
+
+token type: string
+token value: "test string"
+
+token type: string
+token value: ""
+
+token type: string type
+token value: string
+
+token type: name
+token value: StrVar
+
+token type: assignment
+token value: =
+
+token type: string
+token value: "testing"
+
+token type: semi-colon
+token value: ;
+
+token type: boolean type
+token value: boolean
+
+token type: name
+token value: BlnVar
+
+token type: assignment
+token value: =
+
+token type: false
+token value: false
+
+token type: semi-colon
+token value: ;
+
+token type: boolean type
+token value: boolean
+
+token type: name
+token value: BlnVar2
+
+token type: assignment
+token value: =
+
+token type: true
+token value: true
+
+token type: semi-colon
+token value: ;
+
+token type: if
+token value: if
+
+token type: open paren
+token value: (
+
+token type: name
+token value: BlnVar
+
+token type: close paren
+token value: )
+
+token type: name
+token value: then
+
+token type: name
+token value: BlnVar
+
+token type: assignment
+token value: =
+
+token type: false
+token value: false
+
+token type: semi-colon
+token value: ;
+
+token type: end_if
+token value: end_if
+
+token type: function
+token value: function
+
+token type: name
+token value: TestProc
+
+token type: open paren
+token value: (
+
+token type: close paren
+token value: )
+
+token type: returns
+token value: returns
+
+token type: integer type
+token value: integer
+
+token type: integer type
+token value: integer
+
+token type: name
+token value: LocalVar
+
+token type: assignment
+token value: =
+
+token type: integer digit
+token value: 1
+
+token type: semi-colon
+token value: ;
+
+token type: end_function
+token value: end_function
+
+token type: while
+token value: while
+
+token type: open paren
+token value: (
+
+token type: name
+token value: BlnVar
+
+token type: close paren
+token value: )
+
+token type: end while
+token value: end_while
+
+token type: while
+token value: while
+
+token type: open paren
+token value: (
+
+token type: integer digit
+token value: 1
+
+token type: less than
+token value: <
+
+token type: integer digit
+token value: 3
+
+token type: close paren
+token value: )
+
+token type: name
+token value: wend
+
+token type: if
+token value: if
+
+token type: open paren
+token value: (
+
+token type: integer digit
+token value: 1
+
+token type: not equal
+token value: !=
+
+token type: integer digit
+token value: 3
+
+token type: or
+token value: ||
+
+token type: integer digit
+token value: 3
+
+token type: equality
+token value: ==
+
+token type: integer digit
+token value: 3
+
+token type: or
+token value: ||
+
+token type: not
+token value: !
+
+token type: false
+token value: false
+
+token type: and
+token value: &&
+
+token type: true
+token value: true
+
+token type: close paren
+token value: )
+
+token type: name
+token value: then
+
+token type: end_if
+token value: end_if
+
+token type: end program
+token value: end_program
+
+Press any key to continue . . . 

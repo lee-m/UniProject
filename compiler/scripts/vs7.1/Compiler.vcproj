@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="Compiler"
+	ProjectGUID="{A5569199-EC79-49A5-A5A2-2A5E7A7C3531}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="..\..\bin"
+			IntermediateDirectory="..\..\obj\debug"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="..\..\include\driver;&quot;..\..\include\front end&quot;;&quot;..\..\include\front end\tree nodes&quot;;&quot;..\..\include\middle end&quot;;&quot;..\..\include\middle end\mir tree nodes&quot;;..\..\include\tinyxml;..\..\include\util;&quot;..\..\include\back end&quot;;&quot;..\..\include\back end\tree nodes&quot;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				MinimalRebuild="TRUE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="5"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="StdHeader.h"
+				AssemblerOutput="0"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="4"
+				DisableSpecificWarnings="4311;4005"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="tinyxml.lib"
+				OutputFile="$(OutDir)/Compiler_d.exe"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="..\..\libs"
+				IgnoreDefaultLibraryNames="libc"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="$(OutDir)/Compiler.pdb"
+				SubSystem="1"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="..\..\bin"
+			IntermediateDirectory="..\..\obj\release"
+			ConfigurationType="1"
+			CharacterSet="2"
+			WholeProgramOptimization="TRUE">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="3"
+				GlobalOptimizations="TRUE"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="TRUE"
+				AdditionalIncludeDirectories="..\..\include\driver;&quot;..\..\include\front end&quot;;&quot;..\..\include\front end\tree nodes&quot;;&quot;..\..\include\middle end&quot;;&quot;..\..\include\middle end\mir tree nodes&quot;;..\..\include\tinyxml;..\..\include\util;&quot;..\..\include\back end&quot;;&quot;..\..\include\back end\tree nodes&quot;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				StringPooling="TRUE"
+				MinimalRebuild="FALSE"
+				RuntimeLibrary="4"
+				BufferSecurityCheck="TRUE"
+				UsePrecompiledHeader="1"
+				PrecompiledHeaderThrough="StdHeader.h"
+				WarningLevel="4"
+				Detect64BitPortabilityProblems="TRUE"
+				DebugInformationFormat="3"
+				DisableSpecificWarnings="4311;4005;4511;4512;4100;4702;4127"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="tinyxml.lib"
+				OutputFile="$(OutDir)/Compiler.exe"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="..\..\libs"
+				IgnoreDefaultLibraryNames=""
+				GenerateDebugInformation="TRUE"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				OptimizeForWindows98="1"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Middle End"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath="..\..\src\middle end\CControlFlowGraph.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\middle end\CDataFlowAnalyser.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Include Files"
+				Filter="">
+				<File
+					RelativePath="..\..\include\middle end\CControlFlowGraph.h">
+				</File>
+				<File
+					RelativePath="..\..\include\middle end\CDataFlowAnalyser.h">
+				</File>
+				<Filter
+					Name="MIR Tree Nodes"
+					Filter="">
+					<File
+						RelativePath="..\..\include\middle end\mir tree nodes\CGotoExprTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\middle end\mir tree nodes\CLabelTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\middle end\mir tree nodes\CLiteralRefTreeNode.h">
+					</File>
+				</Filter>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Front End"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+				UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+				<File
+					RelativePath="..\..\src\front end\CBuiltinFuncMngr.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\front end\CLexicalScanner.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\front end\CParser.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\front end\CSymbolTable.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\front end\CTreeNodeFactory.cpp">
+				</File>
+				<Filter
+					Name="Tree Nodes"
+					Filter="">
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CArithExprTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CArrayDeclTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CArrayRefTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CAssignExprTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CBooleanExprTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CCallExprTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CFunctionDeclTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CIdentifierTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CIfStmtTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CLiteralTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CParameterDeclTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CParameterListTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CReturnStmtTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CRootTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CUnaryExprTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CVarDeclTreeNode.cpp">
+					</File>
+					<File
+						RelativePath="..\..\src\front end\tree nodes\CWhileStmtTreeNode.cpp">
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="Header Files"
+				Filter="h;hpp;hxx;hm;inl;inc;xsd"
+				UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+				<File
+					RelativePath="..\..\include\front end\CBuiltinFuncMngr.h">
+				</File>
+				<File
+					RelativePath="..\..\include\front end\CLexicalScanner.h">
+				</File>
+				<File
+					RelativePath="..\..\include\front end\CParser.h">
+				</File>
+				<File
+					RelativePath="..\..\include\front end\CSymbolTable.h">
+				</File>
+				<File
+					RelativePath="..\..\include\front end\CTreeNodeFactory.h">
+				</File>
+				<File
+					RelativePath="..\..\include\front end\TokenTypes.h">
+				</File>
+				<File
+					RelativePath="..\..\include\front end\TreeChildIndicies.h">
+				</File>
+				<Filter
+					Name="Tree Nodes"
+					Filter="">
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CArithExprTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CArrayDeclTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CArrayRefTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CAssignExprTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CBooleanExprTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CCallExprTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CFunctionDeclTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CIdentifierTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CIfStmtTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CLiteralTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CParameterDeclTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CParameterListTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CReturnStmtTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CRootTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CUnaryExprTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CVarDeclTreeNode.h">
+					</File>
+					<File
+						RelativePath="..\..\include\front end\tree nodes\CWhileStmtTreeNode.h">
+					</File>
+				</Filter>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Driver"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath="..\..\src\driver\CCompilerDriver.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Include Files"
+				Filter="">
+				<File
+					RelativePath="..\..\include\driver\CCompilerDriver.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Util Stuff"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath="..\..\src\util\CUtilFuncs.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\util\mmgr.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Include Files"
+				Filter="">
+				<File
+					RelativePath="..\..\include\util\CInternalErrorException.h">
+				</File>
+				<File
+					RelativePath="..\..\include\util\CUtilFuncs.h">
+				</File>
+				<File
+					RelativePath="..\..\include\util\ISingleton.h">
+				</File>
+				<File
+					RelativePath="..\..\include\util\mmgr.h">
+				</File>
+				<File
+					RelativePath="..\..\include\util\nommgr.h">
+				</File>
+				<File
+					RelativePath="..\..\include\util\StdHeader.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Back End"
+			Filter="">
+			<Filter
+				Name="Source Files"
+				Filter="">
+				<File
+					RelativePath="..\..\src\back end\CCodeGenerator.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\back end\CGlobalDataStore.cpp">
+				</File>
+				<File
+					RelativePath="..\..\src\back end\CLinearScanAllocator.cpp">
+				</File>
+			</Filter>
+			<Filter
+				Name="Include Files"
+				Filter="">
+				<File
+					RelativePath="..\..\include\back end\CCodeGenerator.h">
+				</File>
+				<File
+					RelativePath="..\..\include\back end\CGlobalDataStore.h">
+				</File>
+				<File
+					RelativePath="..\..\include\back end\CLinearScanAllocator.h">
+				</File>
+			</Filter>
+		</Filter>
+		<File
+			RelativePath="..\..\src\Main.cpp">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

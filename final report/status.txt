@@ -1,0 +1,17 @@
+chapter 1: introduction 		[DONE]
+chapter 2: literature review    	[DONE]
+chapter 3: design of the language	[DONE]
+chapter 4: feasibility tests		[DONE]
+chapter 5: design of the compiler	[DONE]
+chapter 6: product evaluation		[TODO]
+chapter 7: critical evaluation		[TODO]
+References				[DONE]
+
+Appendix A: PRO2			[TODO]
+Appendix B: Gannt chart			[TODO]
+Appendix C: Language Spec		[DONE]
+Appendix D: Debugging Dumps		[DONE]
+Appendix E: Standard library		[TODO]
+
+report Word count:   14366
+appendix word count: 4618

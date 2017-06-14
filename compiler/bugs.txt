@@ -1,0 +1,29 @@
+- following testcase cause an infinite loop:
+
+if(true <- missing '('
+
+  if(true)
+  end_if
+
+end_if
+
+- following triggers a sanity check because the symbol table info is lost
+  for the parameters
+
+
+function LeeIsAcock(float fltPrice, 
+		    integer intCock, 
+		    string strCock, 
+		    boolean blnCock) 
+					returns float
+
+    while(true)
+      fltPrice = fltPrice + 9;
+    end_while
+
+    return 0;
+
+end_function
+
+- local variables declared inside a function which has the same name as a global var, the
+  parser currently rejects this but should allow it

@@ -1,0 +1,50 @@
+- nested array accesses wasn't being decomposed in MIR form
+- rewrote handling of array references in code generator
+- modified MIR lowering to replace array references with temp vars
+- wrote and successfully compiled a bubblesort implementation program using
+  the compiler
+- implemented floating point -> integer truncation where either side of the
+  assignment can be an array reference
+- wrote and successfully compiled an implementation of the quicksort algorithm
+  using the compiler
+
+bug fixes:
+- rejects valid with array references in a relational boolean expression
+- crash in while stmt lowering where the body contained nested if/while stmts
+- arithmetic expressions appearing in array references on the LHS side of an
+  assignment wasn't being simplified
+- fixed bug in array assignment code gen where it was failing to take into 
+  account the fact the RHS could be in memory, causing invalid assembly to be
+  emitted
+- fixed wrong-code bug with while statement lowering where the code to compute the
+condition value was placed before the header label so the loop only
+  iterated once
+- added protection around function calls in code generator to save the contents
+  of the registers as some functions were clobbering values
+- arguments pushed to a function call were not being popped afterwards
+- fixed wrong-code bug with array references, i'd forgot to take into account
+  the fact that arrays are not always the first variable spilled so had hardcoded
+  the offset as -4 rather than using the offset computed by the RA
+- fixed wrong-code bug where boolean expressions using floating point operands
+  was using an integer type temp var to hold the intermediate result, causing
+  incorrect results because of the float->integer truncation
+- rejects valid where an element of a floating point array was used as the
+  conditional expr for an if stmt
+- array references in if statements like "if(arr[0])" were not being replaced
+- when making space on the stack to load the FP control word into for floating
+  point -> integer truncation, the memory wasn't being cleared so when reloading
+  the control word garbage could creep in
+
+[Bugs found from quicksort]
+- the register allocator wasn't considering the possibility of an array decl
+  being at global scope so was making space for it in the stack frame when the
+  memory for it has already been allocated in the .bss section
+- global variables were being allocated a register when they should be ignored
+- when computing the address of an array element, the code generator wasn't
+  taking into account the possibility of an array decl being declared at global
+  scope, in this case the address needs to be computed differently
+- stack frame addresses of parameters was being calculated incorrectly
+- bug when assigning a value into an array element, when getting a scratch reg
+  the _decl for the RHS wasn't being passed so in some cases the scratch reg was
+  actually the reg allocated to the RHS
+- wrong code with integer division where the LHS was allocated to EBX
